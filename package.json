@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/krish-achra/finkit.git"
+    "url": "https://github.com/krishachra/finkit.git"
   },
   "keywords": [
     "finance",
@@ -63,5 +63,9 @@
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "homepage": "https://github.com/krishachra/finkit#readme",
+  "bugs": {
+    "url": "https://github.com/krishachra/finkit/issues"
   }
 }
