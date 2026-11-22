@@ -1,0 +1,67 @@
+{
+  "name": "@krish_achra/finkit",
+  "version": "1.0.0",
+  "description": "Precision financial mathematics toolkit for JavaScript and TypeScript with Indian fintech conventions",
+  "author": "Krish Achra",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krish-achra/finkit.git"
+  },
+  "keywords": [
+    "finance",
+    "financial-mathematics",
+    "fintech",
+    "indian-fintech",
+    "sip-calculator",
+    "step-up-sip",
+    "xirr",
+    "emi",
+    "amortization-schedule",
+    "cagr",
+    "fixed-deposit",
+    "recurring-deposit",
+    "real-returns",
+    "typescript"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm run test && npm run build"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^3.2.7",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
